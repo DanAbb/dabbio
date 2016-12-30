@@ -1,0 +1,74 @@
+.primary {
+   // background: @primary;
+   padding: 10px 30px;
+   color: @primary;
+   border: 0;
+   border-radius: 5px;
+   font-size: 1.5rem;
+   font-weight: bold;
+   cursor: pointer;
+   border: 3px solid @primary;
+   box-sizing: border-box;
+
+   @media screen and (max-width: @screen-sm) {
+      padding: 10px 20px;
+   }
+
+   &:hover {
+      background: @primary;
+      color: @secondary;
+   }
+
+   &.sm {
+      padding: 10px 20px;
+      font-size: 1rem;
+   }
+}
+
+.secondary {
+   border: 3px solid @tertiary;
+   padding: 10px 30px;
+   color: @tertiary;
+   border-radius: 5px;
+   font-size: 1.5rem;
+   font-weight: bold;
+   cursor: pointer;
+
+   @media screen and (max-width: @screen-sm) {
+      padding: 10px 20px;
+   }
+
+   &:hover {
+      background: @tertiary;
+      color: @secondary;
+   }
+
+   &.sm {
+      padding: 10px 20px;
+      font-size: 1rem;
+   }
+}
+
+.tertiary {
+   background: @primary;
+   padding: 10px 30px;
+   color: @tertiary;
+   border: 0;
+   border-radius: 5px;
+   font-size: 1.5rem;
+   font-weight: bold;
+   cursor: pointer;
+
+   @media screen and (max-width: @screen-sm) {
+      padding: 10px 20px;
+   }
+
+   &:hover {
+      background: @primary-dark;
+   }
+
+   &.sm {
+      padding: 10px 20px;
+      font-size: 1rem;
+   }
+}

@@ -1,0 +1,148 @@
+section#carousel {
+   padding: 50px;
+
+   @media screen and (max-width: @screen-sm) {
+      padding: 0 10px 50px;
+   }
+}
+
+.carousel {
+   background: @secondary;
+   position: relative;
+   width: 80%;
+   margin: 0 auto;
+
+   @media screen and (max-width: @screen-sm) {
+      width: 100%;
+   }
+
+   .carousel-frame {
+      overflow: hidden;
+      box-sizing: border-box;
+   }
+
+   .carousel-items {
+      list-style: none;
+      width: 500%;
+
+      > * {
+         float: left;
+         transition: margin-left 0.25s linear;
+         width: 20%;
+         display: flex;
+         align-items: center;
+      }
+
+      img {
+         max-width: 100%;
+         display: block;
+         margin: 0 auto;
+         height: auto;
+      }
+   }
+}
+
+.carousel-controls {
+   position: relative;
+   margin: 0 auto;
+   width: 100%;
+}
+
+.carousel-prev,
+.carousel-next {
+   background: fade(@secondary, 10%);
+   border: 0;
+   color: @primary;
+   cursor: pointer;
+   font: 400 10em sans-serif;
+   outline: 0;
+   position: absolute;
+   bottom: 20px;
+   height: 100%;
+   top: 0;
+
+   @media screen and (max-width: @screen-sm) {
+      font-size: 5em;
+   }
+
+   &:hover {
+      color: lighten(@primary, 10%);
+      background: fade(@secondary, 20%);
+   }
+}
+
+.carousel-prev {
+   left: 0;
+}
+
+.carousel-next {
+   right: 0;
+}
+
+
+.carousel-nav-dots {
+   display: block;
+   height: 20px;
+   margin: 0;
+   text-align: center;
+   margin-top: 10px;
+   // position: absolute;
+
+   li {
+      background: @primary;
+      border-radius: .75em;
+      cursor: pointer;
+      display: inline-block;
+      height: .75em;
+      margin: 0 .75em;
+      width: .75em;
+
+      &.active {
+         background: #fff;
+         box-shadow: 0 0 3px 3px #ddd;
+      }
+
+      &:hover {
+         background: #f5f5f5;
+      }
+   }
+}
+
+.button-control {
+   display: block;
+   text-align: center;
+   margin-top: 10px;
+}
+
+.carousel-stop,
+.carousel-play {
+   height: 2.25em;
+   // position: absolute;
+   bottom: .33em;
+   left: 2em;
+   text-align: center;
+   width: 5em;
+   background: @secondary;
+   color: @primary;
+   margin: 0 10px;
+   outline: none;
+}
+
+.carousel-play {
+   background: @primary;
+   color: @secondary;
+
+   &:hover {
+      background: darken(@primary, 2%);
+   }
+}
+
+.carousel-stop {
+   background: @secondary;
+   border-color: @secondary;
+
+   &:hover {
+      color: @primary;
+      background: lighten(@secondary, 10%);
+   }
+}

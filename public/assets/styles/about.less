@@ -1,0 +1,53 @@
+.about {
+   background: @secondary;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-flow: column wrap;
+   color: @primary;
+   min-height: 100vh;
+   padding: 50px 50px;
+
+   h1 {
+      color: @tertiary;
+      font-size: 4rem;
+      line-height: 5rem;
+      font-weight: bold;
+
+      @media screen and (max-width: @screen-sm) {
+         font-size: 3rem;
+         line-height: 4rem;
+      }
+   }
+
+   p {
+      font-size: 2rem;
+      line-height: 3rem;
+      color: darken(@tertiary, 50%);
+      margin: 25px 0;
+      font-weight: normal;
+
+      @media screen and (max-width: @screen-sm) {
+         font-size: 1rem;
+         line-height: 1.5rem;
+      }
+   }
+
+   h4 {
+      font-style: italic;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin: 20px 0;
+      color: @primary;
+   }
+}
+
+.about-wrapper {
+   max-width: 100%;
+   margin: 0 auto;
+   text-align: center;
+
+   @media screen and (max-width: @screen-sm) {
+      max-width: 100%;
+   }
+}

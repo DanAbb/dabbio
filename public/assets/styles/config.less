@@ -1,0 +1,99 @@
+//PROJECTS
+// @color1: #BE4D60;
+// @color2: fade(@color1, 80%);
+// @color3: #A04668;
+// @color4: #AB4967;
+
+@color1: crimson;
+@color2: blue;
+@color3: darken(#fff, 1%);
+
+// @color3: @color2;
+// @color4: @color1;
+//COLORS
+@secondary: @color3;
+@secondary-dark: darken(@secondary, 10%);
+@primary: @color1;
+@primary-dark: darken(@primary, 10%);
+@tertiary: @color2;
+@tertiary-dark: darken(@tertiary, 20%);
+@tertiary-darker: darken(@tertiary, 50%);
+
+// @color1: darken(@primary, 10%);
+// @color2: @primary;
+// @color3: darken(@primary, 15%);
+// @color4: darken(@primary, 20%);
+
+@screen-lg: 1200px;
+@screen-md: 992px;
+@screen-sm: 768px;
+@screen-xs: 420px;
+
+
+.header(@fs,@lh) {
+	font-size: @fs;
+	line-height: @lh;
+}
+
+.hide {
+	display: none!important;
+}
+
+.small-text {
+	font-size: 0.9rem !important;
+}
+
+.align-center {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.spacer {
+	width: 100px;
+	border-bottom: 4px solid @primary;
+}
+
+.errors {
+	color: red;
+}
+
+.center-wrapper {
+	margin: 0 auto;
+	text-align: center;
+}
+
+h1 {
+	.header(2.4rem, 2.8rem);
+
+	// margin: 20px 0;
+}
+
+h2 {
+	.header(2.2rem, 2.6rem);
+}
+
+h3 {
+	.header(2.0rem, 2.4rem);
+}
+
+h4 {
+	.header(1.8rem, 2.2rem);
+}
+
+h5 {
+	.header(1.6rem, 2.0rem);
+}
+
+p {
+	font-size: 1.1rem;
+	line-height: 1.6rem;
+}
+
+a {
+	color: @secondary;
+	text-decoration: none;
+
+	&:hover {
+		border-bottom: 3px solid @secondary;
+	}
+}

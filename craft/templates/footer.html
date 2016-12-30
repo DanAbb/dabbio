@@ -1,0 +1,27 @@
+<section class="footer">
+   <div class="footer-text">
+      <p>{{ footer.footerText }}</p>
+   </div>
+   <div class="footer-logo">
+      {% set image = topNavigation.companyLogo.last() %}
+      {% if image %}
+         <img src="{{ image.url }}" />
+      {% else %}
+         <svg>
+            <use xlink:href="#logo"></use>
+         </svg>
+      {% endif %}
+   </div>
+   <div class="footer-contact">
+      <h4>Phone:</h4>
+      <p>{{ contact.telephone }}</p>
+      <h4>Email:</h4>
+      <p>{{ contact.email }}</p>
+      <h4>Location:</h4>
+      <p>{{ contact.address }}</p>
+   </div>
+</section>
+<section class="bottom-footer">
+   <p class="attrib">Design by <a href="http://dabb.io">dabb.io</a></p>
+   <p class="copyright">© dabb.io 2016. All rights reserved. ☚ I don't even know what that means...</p>
+</section>

@@ -1,0 +1,29 @@
+{% extends "_layout" %}
+
+{% block content %}
+<div class="project-page">
+   <div class="project-title">
+      <svg>
+         <use xlink:href="#{{ entry.svgName }}"></use>
+      </svg>
+      <div class="project-description">
+         <h1>{{ entry.projectName }}</h1>
+         <p>{{ entry.projectDescription }}</p>
+      </div>
+      <section id="carousel">
+         <div class="carousel">
+            <div class="carousel-frame">
+               <ul class="carousel-items">
+                  {% for asset in entry.projectImage %}
+                     <li><img src="{{ asset.getUrl('slider') }}" width="{{ asset.getWidth('slider') }}" height="{{ asset.getHeight('slider') }}"/></li>
+                  {% endfor %}
+               </ul>
+            </div>
+         </div>
+         <div class="carousel-controls">
+
+         </div>
+      </section>
+   </div>
+</div>
+{% endblock %}

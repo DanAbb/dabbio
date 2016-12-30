@@ -1,0 +1,7 @@
+craft/app
+craft/config
+craft/plugins
+craft/storage
+.htaccess
+.DS_Store
+*/node_modules/*

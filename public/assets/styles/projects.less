@@ -1,0 +1,169 @@
+.projects {
+   // height: 100vh;
+   background: @primary;
+   width: 100%;
+}
+
+.projects-wrapper {
+   display: flex;
+   flex-flow: row wrap;
+   // border: 5px dashed @secondary;
+   // background: @secondary;
+   width: 100%;
+}
+
+.project {
+   height: 400px;
+   width: 50%;
+   background: @secondary;
+   flex: 1 0 300px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   // border-bottom: 5px solid @primary;
+   box-sizing: border-box;
+   min-width: 320px;
+   flex-flow: column wrap;
+   cursor: pointer;
+   transition: all .4s;
+
+   svg,
+   h1 {
+      transition: all .4s;
+      text-align: center;
+   }
+
+   a {
+      &:hover {
+         border-bottom: none;
+      }
+   }
+
+   &:hover {
+      // background: lighten(@secondary, 4%);
+
+      svg {
+         fill: #fff;
+         transform: scale(.9);
+      }
+
+      h1 {
+         color: #fff;
+         transform: scale(1.2);
+      }
+   }
+
+   h1 {
+      color: darken(@secondary, 10%);
+      margin: 20px 0;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2rem;
+   }
+
+   svg {
+      fill: darken(@secondary, 10%);
+   }
+}
+
+.box1 {
+   background: lighten(@tertiary, 6%);
+
+   @media screen and (max-width: @screen-md) {
+      h1 {
+         font-size: 1.6rem;
+      }
+   }
+}
+
+.box2 {
+   background: lighten(@tertiary, 7%);
+}
+
+.box3 {
+   background: lighten(@tertiary, 8%);
+}
+
+.box4 {
+   background: lighten(@tertiary, 9%);
+}
+
+.box5 {
+   background: lighten(@tertiary, 10%);
+
+   @media screen and (max-width: @screen-md) {
+      h1 {
+         font-size: 1.6rem;
+      }
+   }
+}
+
+.box6 {
+   background: lighten(@tertiary, 11%);
+
+   @media screen and (max-width: @screen-md) {
+      h1 {
+         font-size: 1.6rem;
+      }
+   }
+}
+
+.project-title {
+   min-height: calc(~'100vh - 120px');
+   background: @secondary;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: center;
+
+   h1 {
+      color: @color2;
+   }
+
+   svg {
+      fill: darken(@secondary, 50%);
+      margin-top: 50px;
+   }
+}
+
+.project-description {
+   width:  70%;
+   display: flex;
+   flex-flow: column wrap;
+   justify-content: center;
+   align-items: center;
+   padding: 0 50px;
+   box-sizing: border-box;
+   text-align: center;
+
+   @media screen and (max-width: @screen-sm) {
+      width: 100%;
+      padding: 0 10px;
+      margin: 50px 0;
+   }
+
+   h1 {
+      color: @tertiary;
+      margin: 20px auto;
+      font-weight: bold;
+      font-size: 3rem;
+      line-height: 3rem;
+
+      @media screen and (max-width: @screen-sm) {
+         text-align: center;
+         font-size: 2.4rem;
+         line-height: 2rem;
+      }
+   }
+
+   p {
+      color: darken(@tertiary, 50%);
+   }
+}
+
+.project-work {
+   img {
+      width: 70%;
+      height: auto;
+   }
+}

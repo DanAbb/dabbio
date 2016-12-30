@@ -1,0 +1,166 @@
+@tertiary: #3e1d8e;
+@primary: #d695ff;
+
+.cv-wrapper {
+   background: @secondary;
+   color: @secondary;
+
+   .sidebar {
+      height: 100vh;
+      width: 250px;
+      background: @tertiary;
+      padding-top: 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      div {
+         margin: 20px auto;
+      }
+
+      .me {
+         text-align: center;
+         font-weight: bold;
+         margin: auto;
+
+         h4 {
+            font-size: 1.2rem;
+            margin-top: -10px;
+            color: @primary;
+         }
+
+         svg {
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            display: block;
+            border: 10px solid white;
+            border-radius: 150px;
+            background: @primary;
+         }
+      }
+
+      .skills {
+         margin: 20px 14px;
+         text-align: center;
+      }
+
+      .skill {
+         list-style: none;
+         text-align: right;
+         margin: 10px auto;
+
+         .on, .off {
+            height: 10px;
+            width: 10px;
+            display: inline-block;
+            border-radius: 10px;
+            box-sizing: border-box;
+         }
+
+         .on {
+            background: @primary;
+         }
+
+         .off {
+            background: @tertiary;
+            border: 1px solid @primary;
+         }
+      }
+
+      .contact {
+         // text-align: center;
+         font-weight: bold;
+         margin: 0 50px;
+
+         div {
+            margin: 0 auto;
+         }
+
+         h5 {
+            font-size: 1rem;
+         }
+
+         svg {
+            height: 20px;
+            width: 20px;
+            float: left;
+            fill: @primary;
+            margin-top: 6px;
+            padding-right: 10px;
+         }
+      }
+   }
+
+   .container {
+      margin-left: 250px;
+      padding: 50px;
+      max-width: 600px;
+
+      .title {
+         max-width: 320px;
+         height: 50px;
+         // border-bottom: 10px solid @primary;
+         // border-radius: 10px;
+         // text-align: center;
+         background: @tertiary;
+         margin-bottom: 20px;
+         margin-left: -50px;
+
+         h1 {
+            padding: 5px 20px;
+            font-weight: bold;
+            margin-left: 30px;
+         }
+      }
+
+      .text {
+         color: @tertiary;
+         margin-bottom: 20px;
+      }
+
+      .role {
+         margin: 20px 0;
+
+         h3 {
+            font-size: 1.6rem;
+            font-weight: bold;
+         }
+
+         h4 {
+            font-size: 1.2rem;
+         }
+
+         h6 {
+            color: @primary;
+         }
+
+         ul {
+            margin: 20px 0;
+
+            li {
+               line-height: 20px;
+            }
+         }
+      }
+   }
+
+   .logos {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: @primary;
+      width: 300px;
+      border-left: 5px dashed @tertiary;
+      display: none;
+
+      @media screen and (max-width: @screen-md) {
+         display: none;
+      }
+
+      svg {
+         margin: 10px auto;
+         height: 87px;
+      }
+   }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	<link rel="home" href="{{ siteUrl }}" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="/public/css/app.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+</head>
+
+<body>
+	<div style="display:none">
+		{% include 'sprite.html' %}
+	</div>
+	{% include 'contactnav.html' %}
+	{% include 'mainnav.html' %}
+
+	{% block content %}
+
+	{% endblock %}
+
+	{% include 'footer.html' %}
+	<script type="text/javascript" src="/public/javascript/build.js"></script>
+</body>
+</html>

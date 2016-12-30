@@ -1,0 +1,11 @@
+{% set image = entry.quoteImage.last() %}
+{% if image %}
+   <div class="js-background-img hidden" data-img="{{ image.url }}"></div>
+{% endif %}
+<section class="home-quote">
+   <div class="quote-content">
+      <h1 class="title">{{ entry.quoteTitle }}</h1>
+      <p class="subtitle">{{ entry.quoteBody }}</p>
+   </div>
+</section>
+

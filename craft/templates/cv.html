@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+   <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+   <link rel="home" href="{{ siteUrl }}" />
+   <meta charset="utf-8" />
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <link rel="stylesheet" type="text/css" href="/public/css/app.css">
+   <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+</head>
+
+<body class="cv-wrapper">
+   <div style="display:none">
+      {% include 'sprite.html' %}
+   </div>
+   <div class="sidebar">
+      <div class="me">
+         <svg>
+            <use xlink:href="#me"></use>
+        </svg>
+        <h1>{{ entry.myName }}</h1>
+        <h4>{{ entry.occupation }}</h4>
+      </div>
+      <div class="skills">
+      {% for block in entry.skills %}
+         <li class="skill">
+            {{ block.skillName }}
+            {% for i in 0..9 %}
+               {% if i < block.skillRating %}
+                  <span class="on"></span>
+               {% else %}
+                  <span class="off"></span>
+               {% endif %}
+            {% endfor %}
+         </li>
+      {% endfor %}
+      </div>
+      <div class="contact">
+         <div class="tel">
+            <svg>
+               <use xlink:href="#phone"></use>
+           </svg>
+            <h5>{{ contact.telephone }}</h5>
+         </div>
+         <div class="email">
+            <svg>
+               <use xlink:href="#email"></use>
+           </svg>
+            <h5>{{ contact.email }}</h5>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="title">
+         <h1>About Me</h1>
+      </div>
+      <div class="text">
+         <p>{{ entry.about }}</p>
+      </div>
+      <div class="title">
+         <h1>Career</h1>
+      </div>
+      <div class="text">
+         {% for block in entry.career %}
+            <div class="role">
+               <h3>{{ block.roleTitle }}</h3>
+               <h4>{{ block.location }}</h4>
+               <h6>{{ block.dates }}</h6>
+               <p>
+                  {{ block.description }}
+               </p>
+            </div>
+         {% endfor %}
+      </div>
+      <div class="title">
+         <h1>Education</h1>
+      </div>
+      <div class="text">
+         <h1>{{ entry.education }}</h1>
+      </div>
+      <div class="title">
+         <h1>Hobbies</h1>
+      </div>
+      <div class="text">
+         <p>{{ entry.hobbies }}</p>
+      </div>
+   </div>
+   <div class="logos">
+      <svg>
+         <use xlink:href="#backbone"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#javascript"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#jquery"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#gulp"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#node"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#html5"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#css3"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#less"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#sass"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#bootstrap"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#git"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#github"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#confluence"></use>
+      </svg>
+      <svg>
+         <use xlink:href="#photoshop"></use>
+      </svg>
+   </div>
+   <script type="text/javascript" src="/public/javascript/build.js"></script>
+</body>
+</html>

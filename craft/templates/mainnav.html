@@ -1,0 +1,32 @@
+<nav class="top-nav">
+   <div class="top-logo">
+      <a href="/">
+         {% set image = topNavigation.companyLogo.last() %}
+         {% if image %}
+            <img src="{{ image.url }}" />
+         {% else %}
+            <svg>
+               <use xlink:href="#logo"></use>
+            </svg>
+         {% endif %}
+      </a>
+   </div>
+   <div class="top-name">
+      <h5>{{ topNavigation.companyName }}</h5>
+      <h6>{{ topNavigation.companySubhead }}</h6>
+   </div>
+   <div class="hamburger">
+      <div id="nav-icon3">
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+      </div>
+   </div>
+   <ul class="menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+   </ul>
+</nav>

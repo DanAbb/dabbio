@@ -1,0 +1,41 @@
+.clients-section {
+   padding: 10px 0;
+}
+
+.clients {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: stretch;
+   box-sizing: border-box;
+
+   .client {
+      flex: 0 0 48%;
+      background: @tertiary;
+      padding: 20px;
+      margin: 10px;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: baseline;
+      box-sizing: border-box;
+      justify-content: center;
+
+      @media screen and (max-width: @screen-sm) {
+         flex: 100%;
+      }
+   }
+
+   h3 {
+      font-size: 1.4rem;
+      flex: 0 0 100%;
+      align-self: flex-start;
+   }
+
+   img {
+      max-height: 100px;
+
+      @media screen and (max-width: @screen-sm) {
+         max-width: 300px;
+      }
+   }
+}
