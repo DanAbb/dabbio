@@ -1,8 +1,7 @@
 {
-  "name": "hapi",
+  "name": "Dabbio",
   "version": "1.0.0",
-  "description": "Hapi JS test server",
-  "main": "app.js",
+  "description": "Dan Abbott Portfolio",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
